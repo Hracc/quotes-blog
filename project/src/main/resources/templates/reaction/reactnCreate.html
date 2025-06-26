@@ -1,0 +1,41 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Предложить цитату</title>
+    <link rel="stylesheet" href="../common/styles/headerStyle.css">
+    <link rel="stylesheet" href="../common/styles/createAndEditStyle.css">
+</head>
+
+<body>
+    <div>
+    </div>
+    <br>
+    <div class="create-or-edit">
+        <h2>Добавление реакции</h2>
+        <div>
+            <label for="nameReaction">Реакция:</label>
+            <input type="text" name="nameReaction" id="nameReaction">
+        </div>
+        <div>
+            <div class="conf">
+                <button onclick="submitForm()" id="uploadButton">Подтвердить</button>
+            </div>
+            <div>
+                <button id="back-button">Вернуться назад</button>
+            </div>
+            <div id="msgContainer" class="msgContainer">
+                <p id="message"></p>
+            </div>
+        </div>
+        <script src="common/scripts/reaction/reactionCreateScript.js"></script>
+        <script>
+            const backButton = document.getElementById('back-button');
+            backButton.addEventListener('click', function () {
+                window.history.back();
+            });
+        </script>
+    </div>
+    <th:block th:replace="~{header :: headerFragment}"></th:block>
+</body>
+
+</html>

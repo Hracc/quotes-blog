@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <div th:fragment="headerFragment" class="header-container">
+        <header>
+            <link rel="stylesheet" href="common/styles/headerStyle.css">
+            <a href="/" id="name">Блог цитат</a>
+            <div class="dropdown">
+                <button>Создать</button>
+                <div class="dropdown-content">
+                    <a href="/userCreate">Пользователя</a>
+                    <a href="/postCreate">Пост</a>
+                    <a href="/reactnCreate">Реакцию</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>Посмотреть</button>
+                <div class="dropdown-content">
+                    <a href="/userView">Пользователей</a>
+                    <a href="/postView">Посты</a>
+                    <a href="/reactnView">Реакции</a>
+                </div>
+        </header>
+</body>
+
+</html>

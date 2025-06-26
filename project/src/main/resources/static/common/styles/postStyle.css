@@ -1,0 +1,185 @@
+.post {
+    border-radius: 20px;
+    background-color: #e5e9ef;
+    padding: 2.6%;
+    margin: 10px auto;
+    width: 68%;
+}
+
+.post-nick {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 150%;
+    margin-bottom: 1.5%;
+}
+
+.post-nick a {
+    color: #31314c;
+    text-decoration: none;
+}
+
+.post-nick a:hover {
+    text-decoration: underline;
+}
+
+.post-text {
+    color: #3b3b44;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 180%;
+    margin-bottom: 1.5%;
+}
+
+.post-img {
+    margin: 0 auto;
+    margin-bottom: 1.5%;
+    overflow: hidden;
+}
+
+.post-img img {
+    border-radius: inherit;
+    display: block;
+    max-height: 600px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.buttons button {
+    margin-left: 2%;
+    border: solid #adadc0;
+    background-color: #e5e9ef;
+    border-radius: 5px;
+    color: #3b3b44;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 130%;
+    font-weight: bold;
+    height: 40px;
+    width: 20%;
+}
+
+.buttons button:hover {
+    background-color: #bec2c7;
+}
+
+.edit {
+    float: right;
+}
+
+#edit {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #424297;
+    font-size: 120%;
+}
+
+.del {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e5e9ef;
+    border: solid #adadc0;
+    border-radius: 6px;
+    font-size: 110%;
+    font-weight: bold;
+    color: #31314c;
+}
+
+.del:hover {
+    background-color: #bec2c7;
+}
+
+
+.info,
+.title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 150%;
+    margin-bottom: 1.5%;
+    color: #31314c;
+
+}
+
+.title {
+    font-weight: bold;
+}
+
+#deleteAccountModal {
+    display: none;
+}
+
+.modal {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.modal-content {
+    position: relative;
+    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 480px;
+    background-color: #dde2e8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modal-content p {
+    font-size: 120%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #3b3b44;
+    background-color: #e5e9ef;
+    border: solid #adadc0;
+    border-radius: 10px;
+    padding: 8px 12px;
+}
+
+.close-modal:hover {
+    background-color: #bec2c7;
+}
+
+.delete-account button {
+    background-color: #e5e9ef;
+    border: 2px solid #9a0000;
+    border-radius: 10px;
+    color: #8f0000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 110%;
+    font-weight: bold;
+    height: 40px;
+    margin-right: 10px;
+    width: 30%;
+}
+
+.delete-account button:hover {
+    background-color: #beb1b1;
+}
+
+.conf button {
+    margin-left: 2%;
+    border: solid #adadc0;
+    background-color: #e5e9ef;
+    border-radius: 10px;
+    color: #3b3b44;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 110%;
+    font-weight: bold;
+    height: 40px;
+    width: 30%;
+}
+
+.conf button:hover {
+    background-color: #bec2c7;
+}
+
+.conf,
+.delete-account {
+    margin-bottom: 1%;
+}

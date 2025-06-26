@@ -1,0 +1,34 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Страница пользователя</title>
+    <link rel="stylesheet" href="../common/styles/accPage.Style.css">
+    <link rel="stylesheet" href="../common/styles/postStyle.css">
+</head>
+<body>
+    <div th:fragment="headerFragment" class="header-container">
+    </div>
+    <br>
+
+    <div class="user-info">
+        <div class="nick" id="nick">
+        </div>
+        <div class="status">
+            <div class="status-label">Цитат публиковано:
+                <div class="status-number" id="status-public"></div>
+            </div>
+            <div class="status-label">Цитат предложено:
+                <div class="status-number" id="status-offered"></div>
+            </div>
+            <div class="status-label">Реакций поставлено:
+                <div class="status-number" id="status-liked"></div>
+            </div>
+        </div>
+    </div>
+    <div class="posts" id="posts-container"></div>
+    <script type="module" src="common/scripts/user/userPostScript.js"></script>
+    <script type="module" src="common/scripts/user/accUserScript.js"></script>
+
+    <th:block th:replace="~{header :: headerFragment}"></th:block>
+</body>
+</html>

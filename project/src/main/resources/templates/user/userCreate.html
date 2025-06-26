@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Добавление пользователя</title>
+    <link rel="stylesheet" href="../common/styles/createAndEditStyle.css">
+</head>
+<body>
+    <div th:fragment="headerFragment" class="header-container">
+    </div>
+    <br>
+    <div class="create-or-edit">
+        <h2>Добавление пользователя</h2>
+        <div>
+            <label for="username">Имя пользователя:</label>
+            <input type="text" name="username" id="username">
+        </div>
+        <div>
+            <label for="password">Пароль:</label>
+            <input type="text" name="password" id="password">
+        </div>
+        <div>
+            <label for="role">Роль:</label>
+            <select id="role" name="role">
+                <option value="user">Пользователь</option>
+                <option value="admin">Админ</option>
+            </select>
+        </div>
+        <div class="conf">
+            <button type="submit" onclick="submitForm()">Подтвердить</button>
+        </div>
+        <div>
+            <button id="back-button">Вернуться назад</button>
+        </div>
+        <div id="msgContainer" class="msgContainer">
+            <p id="message"></p>
+        </div>
+    </div>
+    <th:block th:replace="~{header :: headerFragment}"></th:block>
+    <script src="common/scripts/user/userCreateScript.js"></script>
+    <script>
+        const backButton = document.getElementById('back-button');
+        backButton.addEventListener('click', function () {
+            window.history.back();
+        });
+    </script>
+</body>
+</html>

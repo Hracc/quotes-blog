@@ -1,0 +1,58 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <title>Предложить цитату</title>
+    <link rel="stylesheet" href="../common/styles/headerStyle.css">
+    <link rel="stylesheet" href="../common/styles/createAndEditStyle.css">
+</head>
+
+<body>
+    <div th:fragment="headerFragment" class="header-container">
+    </div>
+    <br>
+
+    <div class="create-or-edit">
+        <h2>Редактирование поста</h2>
+        <div>
+            <label for="username">Имя пользователя:</label>
+            <input type="text" name="username" id="username">
+        </div>
+        <div>
+            <label for="text">Цитата и фото:</label>
+            <textarea name="textPost" id="textPost"></textarea>
+        </div>
+        <div>
+            <label for="role">Статус поста:</label>
+            <select id="statusPost" name="statusPost">
+                <option value="published">Опубликовано</option>
+                <option value="offered">Предложено</option>
+            </select>
+        </div>
+        <div class="button-container">
+            <div class="conf">
+                <button onclick="confEdit()">Подтвердить</button>
+            </div>
+            <div>
+                <button id="back-button">Вернуться назад</button>
+            </div>
+        </div>
+        <div id="msgContainer" class="msgContainer">
+            <p id="message"></p>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        const backButton = document.getElementById('back-button');
+        backButton.addEventListener('click', function () {
+            localStorage.removeItem('idPost');
+            window.history.back();
+        });
+    </script>
+    <script src="common/scripts/post/postEditScript.js"></script>
+    <script src="common/scripts/post/postLoadScript.js"></script>
+    <th:block th:replace="~{header :: headerFragment}"></th:block>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Редактирование пользователя</title>
+    <link rel="stylesheet" href="../common/styles/createAndEditStyle.css">
+    <link rel="stylesheet" href="../common/styles/headerStyle.css">
+</head>
+<body>
+    <div th:fragment="headerFragment" class="header-container">
+    </div>
+    <br>
+    <div class="create-or-edit">
+        <h2>Редактирование пользователя</h2>
+        <div>
+            <label for="username">Имя пользователя:</label>
+            <input type="text" name="username" id="username">
+        </div>
+        <div>
+            <label for="password">Пароль:</label>
+            <input type="text" name="password" id="password">
+        </div>
+        <div>
+            <label for="role">Роль:</label>
+            <select id="role" name="role">
+                <option value="user">Пользователь</option>
+                <option value="admin">Админ</option>
+            </select>
+        </div>
+        <div class="button-container">
+            <div class="conf">
+                <button onclick="confEdit()">Подтвердить</button>
+            </div>
+            <div>
+                <button id="back-button">Вернуться назад</button>
+            </div>
+        </div>
+        <div id="msgContainer" class="msgContainer">
+            <p id="message"></p>
+        </div>
+    </div>
+    <script>
+        const backButton = document.getElementById('back-button');
+        backButton.addEventListener('click', function () {
+            localStorage.removeItem('idUser');
+            window.history.back();
+        });
+    </script>
+    <script src="common/scripts/user/userEditScript.js"></script>
+    <script src="common/scripts/user/userLoadScript.js"></script>
+    <th:block th:replace="~{header :: headerFragment}"></th:block>
+</body>
+</html>

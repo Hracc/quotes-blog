@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Лента цитат</title>
+    <link rel="stylesheet" href="common/styles/postStyle.css">
+    <link rel="stylesheet" href="../common/styles/postStyle.css">
+</head>
+
+<body>
+    <div th:fragment="headerFragment" class="header-container">
+    </div>
+    <br>
+    <div class="posts" id="posts-container"></div>
+    <div class="modal" id="deleteAccountModal">
+        <div class="modal-content">
+            <p id="modal-msg">Вы уверены, что хотите удалить пост?</p>
+            <div class="buttons">
+                <div class="delete-account">
+                    <button onclick="deleteAccount()">Да, удалить</button>
+                </div>
+                <div class="conf">
+                    <button onclick="delCancel()">Нет</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="common/scripts/post/publishedPostScript.js"></script>
+    <script src="common/scripts/post/postEditScript.js"></script>
+    <script src="common/scripts/post/postDelScript.js"></script>
+    <th:block th:replace="~{header :: headerFragment}"></th:block>
+</body>
+
+</html>
